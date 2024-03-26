@@ -6,7 +6,7 @@ const userAuth=(req,res,next)=>{
             if (decodedToken) {
                 console.log(token);
                 req.userId=decodedToken._id;
-                console.log('ok'); 
+                // console.log('ok'); 
                 console.log(decodedToken);
                 next()
                 
