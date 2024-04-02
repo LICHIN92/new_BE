@@ -35,7 +35,8 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/admin', adminRouter);
 app.use('/users', usersRouter);
-app.use('/auth',authRouter)
+app.use('/auth',authRouter);
+app.use('/payments',paymentRouter)
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   next(createError(404));

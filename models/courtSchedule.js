@@ -17,12 +17,13 @@ const schema=mongoose.Schema({
         type:mongoose.Types.ObjectId,
         ref:'users'
     },
-    cancellation:{
-        type:Array
-    },
-    courtId:{
+       courtId:{
         type:mongoose.Types.ObjectId,
         required:true
+    },
+    orderId:{
+        type:mongoose.Types.ObjectId,
+        ref:'orders'
     }
 })
 

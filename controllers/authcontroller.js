@@ -3,8 +3,8 @@ const bcrypt=require('bcrypt')
 const jwt=require('jsonwebtoken')
 
 const dosignup=(req,res)=>{
-   console.log(req.body);
-   console.log('dosignup');
+   // console.log(req.body);
+   // console.log('dosignup');
    bcrypt.hash(req.body.password,parseInt(process.env.SALT_ROUNDS),function(err,hash){
       // console.log(hash);
       USERS({
@@ -16,7 +16,7 @@ const dosignup=(req,res)=>{
       }).save()
       .then((response) => {
          res.status(200).json({message:'signup successfull'})
-         console.log('its ok');
+         // console.log('its ok');
       }).catch((err) => {
          console.log(err);
          if(err.code===11000){
